@@ -10,5 +10,7 @@ abstract class IAuthRepository {
     required Password password,
   });
 
+  Future<Result<None, AuthFailure>> refresh();
+
   Future<void> logout();
 }
